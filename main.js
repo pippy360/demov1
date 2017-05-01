@@ -890,6 +890,7 @@ function getColourForIndex(pointDistance) {
 
 
 function drawTriangles(canvasContext, triangles) {
+    canvasContext.beginPath();
     for (var i = 0; i < triangles.length; i++) {
         var colour = getColourForIndex(getEuclideanDistance(triangles[i][0], triangles[i][1]));
         drawTriangle(canvasContext, triangles[i], colour);
